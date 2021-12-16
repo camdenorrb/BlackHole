@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.6.10"
+    kotlin("plugin.serialization") version "1.6.10"
 }
 
 group = "dev.twelveoclock"
@@ -10,5 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    implementation(platform(kotlin("bom")))
+    implementation(kotlin("stdlib-jdk8"))
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
 }
