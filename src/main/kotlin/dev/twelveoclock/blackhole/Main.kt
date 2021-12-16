@@ -1,9 +1,5 @@
 package dev.twelveoclock.blackhole
 
-import tech.poder.blackhole.PackageType
-import java.net.URL
-import java.nio.file.Path
-
 object Main {
 
     @JvmStatic
@@ -13,6 +9,10 @@ object Main {
             return
         }
         if (args[0] == "package") {
+            //Vars
+            // STRACE commad: $strace <command>
+            // ADD FLAG: $flag=[name] <command>
+            // ADD Dep: $dep=[name] <packageName> <vararg flags>
 
         } else {
             TODO()
