@@ -3,7 +3,7 @@ package tech.poder.blackhole
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Package(val name: String, val version: String, val experimental: Boolean = false, val type: PackageType = PackageType.GIT, var installed: Boolean = false) {
+data class Package(val name: String, val version: String, val dependencies: List<Package> = emptyList(), val experimental: Boolean = false, val type: PackageType = PackageType.GIT, var installed: Boolean = false) {
 
     fun parse(target: Target) {
         when (target) {
