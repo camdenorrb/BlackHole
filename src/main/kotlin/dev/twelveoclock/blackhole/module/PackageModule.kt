@@ -12,8 +12,6 @@ class PackageModule(val packageDir: Path) : BasicModule() {
     val installed = mutableMapOf<String, Package>()
 
 
-
-
     // TODO: Add symlinks
     fun install(`package`: Package) {
         download(`package`.downloadURL, directoryFor(`package`))
@@ -25,7 +23,7 @@ class PackageModule(val packageDir: Path) : BasicModule() {
         directoryFor(`package`).deleteIfExists()
         installed.remove(`package`.name)
     }
-
+    
 
     private fun directoryFor(`package`: Package): Path {
         return Path(packageDir.absolutePathString(), `package`.name)
